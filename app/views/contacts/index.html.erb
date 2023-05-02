@@ -14,6 +14,7 @@
         <th>Email</th>
         <th>Physical Address</th>
         <th>Billing Address</th>
+        <%# <th>User ID</th> %>
         <th>Actions</th>
       </tr>
     </thead>
@@ -29,11 +30,15 @@
       <%= contact.billing_address%>
       </div>
     -->
+    <% if contact.user == current_user%>
     <tr>
       <td><%= link_to contact.first_name + ' ' + contact.last_name, contact %></td>
       <td><%= contact.email%> </td>
       <td><%= contact.physical_address%> </td>
       <td><%= contact.billing_address%> </td>
+
+        <%#= contact.user_id%>
+
 
       <td>
         <div style="display: flex; gap: 5px;">
@@ -43,6 +48,7 @@
      </div>
       </tr>
 
+    <% end %>
     <% end %>
 
      </tbody>

@@ -11,32 +11,27 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+  <div class="form-group">
+    <%= form.text_field :first_name , class: "form-control", placeholder:"First Name"%>
   </div>
 
-  <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+  <div class="form-group">
+    <%= form.text_field :last_name , class: "form-control" , placeholder:"Last Name"%>
   </div>
 
-  <div>
-    <%= form.label :physical_address, style: "display: block" %>
-    <%= form.text_field :physical_address %>
+  <div class="form-group">
+    <%= form.text_field :physical_address , class: "form-control", placeholder:"Physical Address"%>
   </div>
 
-  <div>
-    <%= form.label :billing_address, style: "display: block" %>
-    <%= form.text_field :billing_address %>
+  <div class="form-group">
+    <%= form.text_field :billing_address , class: "form-control", placeholder:"Billing Address"%>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+  <div class="form-group">
+    <%= form.text_field :email , class: "form-control", placeholder:"Email Address"%>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions">
+    <%= form.submit class:'btn btn-success'%>
   </div>
 <% end %>
